@@ -15,7 +15,7 @@ const obj2 = {
 };
 
 const obj3 = Object.create(obj2);
-obj3['test'] = 'test1';
+obj3.test = 'test1';
 
 console.log(arr1);
 console.log(obj1);
@@ -47,3 +47,5 @@ for (index in arr1) {
 for (value of arr1) {
 	console.log(value);
 }
+
+console.log(obj3);
