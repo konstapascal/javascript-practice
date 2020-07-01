@@ -17,8 +17,8 @@ const konsta = {
 
 konsta.__proto__ = person;
 
-console.log(person);
-console.log(numbers);
+// console.log(person);
+// console.log(numbers);
 
 // ES6 classes
 class Person {
@@ -80,3 +80,11 @@ console.log(johnPerson2);
 console.log(konsta2);
 console.log(johnProf2);
 console.log(trainee);
+
+function Person2(dob) {
+	this.dob = dob;
+}
+
+console.log(Person2.prototype);
+
+const instancePerson = new Person2('instance');
