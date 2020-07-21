@@ -28,7 +28,7 @@ class Person {
 		this.age = age;
 	}
 
-	printInfo2() {
+	static printInfo2() {
 		return (
 			this.firstname + ' ' + this.lastname + ' - ' + this.age + ' ' + this.job
 		);
