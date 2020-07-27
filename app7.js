@@ -1,48 +1,62 @@
-// sync code
-
 console.log('start');
 
 // async code
 
 // callbacks
 
-function getUser(arg, callback) {
+const condition = false;
+
+function getUser(arg, successCallback, errorCallback) {
 	setTimeout(() => {
-		console.log('function1: getUser');
-		// callback(arg);
-	}, 2222);
+		if (condition) {
+			console.log('function1: getUser');
+			successCallback(arg);
+		} else {
+			console.log('function1: getUser (false)');
+			errorCallback({ msg: 'error', args: arg });
+		}
+	}, 555);
 }
 
 function getUserDetails(arg, callback) {
 	setTimeout(() => {
 		console.log('function2: getUserDetails');
-		// callback(arg);
-	}, 3333);
+		callback(arg);
+	}, 555);
 }
 
 function getUserName(arg, callback) {
 	setTimeout(() => {
 		console.log('function3: getUserName');
-		// callback(arg);
-	}, 4444);
+		callback(arg);
+	}, 555);
 }
 
-const p1 = new Promise((resolve) => resolve('promise1'));
+// callback hell, nesting callbacks when chaining async functions (solved by promises)
 
-// getUser('arg1 passed in', function (string) {
-// 	console.log(string);
-// 	getUserDetails('arg2 passed in', function (string) {
-// 		console.log(string);
-// 		getUserName('arg3 passed in', function (string) {
-// 			console.log(string);
-// 		});
-// 	});
-// });
+getUser(
+	'arg1 passed in',
+	function (string) {
+		console.log(string);
+		getUserDetails('arg2 passed in', function (string) {
+			console.log(string);
+			getUserName('arg3 passed in', function (string) {
+				console.log(string);
+				getUserName('arg4 passed in', function (string) {
+					console.log(string);
+					getUserName('arg5 passed in', function (string) {
+						console.log(string);
+						getUserName('arg6 passed in', function (string) {
+							console.log(string);
+						});
+					});
+				});
+			});
+		});
+	},
+	function (err) {
+		console.log(err.msg);
+	}
+);
 
-getUser();
-getUserDetails();
-getUserName();
-
-p1.then((string) => console.log(string)).then(() => console.log('second log'));
-
-console.log('finish');
+console.log('end');
