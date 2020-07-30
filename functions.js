@@ -12,4 +12,4 @@ const function3 = function function3() {
 
 const function2 = function () {}; // anon function expresssion
 
-const function4 = () => {}; // same as above, ESS6 syntax
+const function4 = () => {}; // same as above, ES6 syntax
