@@ -12,9 +12,9 @@ let a = 'var a';
 const arr = Array(2, 3);
 const arr2 = Object.create(Array);
 
-console.log(arr);
-console.log(arr.__proto__);
-console.log(arr.prototype);
+console.log('arr: ', arr);
+console.log('arr._proto_: ', arr.__proto__);
+console.log('arr.prototype: ', arr.prototype);
 
 console.log(Array);
 
