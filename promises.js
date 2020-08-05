@@ -2,23 +2,24 @@ console.log('start');
 
 // promises get put in the microtask queue (job queue), higher priority
 
-const p1 = new Promise((resolve, reject) => {
-	resolve('p1');
+const p1 = new Promise(resolve => {
+	console.log('promise 1 log');
+	resolve('promise 1');
 });
 
-const p2 = new Promise((resolve, reject) => {
+const p2 = new Promise(resolve => {
 	setTimeout(() => {
-		resolve('p2');
+		resolve('promise 2');
 	}, 0);
 });
 
 // async functions like timeout, interval, event handlers get put in webapi and the macrotask queue (task queue) thereafter
 
 setTimeout(() => {
-	console.log('t1');
+	console.log('timeout 1');
 }, 0);
 
-p2.then(msg => console.log(msg)).catch(err => console.log(err));
-p1.then(msg => console.log(msg)).catch(err => console.log(err));
+p2.then(msg => console.log(msg));
+p1.then(msg => console.log(msg));
 
 console.log('end');
