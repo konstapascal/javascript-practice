@@ -4,19 +4,21 @@ console.log('start');
 
 const p1 = new Promise(resolve => {
 	console.log('promise 1 log');
-	resolve('promise 1');
+	resolve('promise 1'); // micro q
 });
 
 const p2 = new Promise(resolve => {
+	console.log('promise 2 log');
 	setTimeout(() => {
-		resolve('promise 2');
+		console.log('promise 2 log inside timeout');
+		resolve('promise 2'); // task q 1
 	}, 0);
 });
 
 // async functions like timeout, interval, event handlers get put in webapi and the macrotask queue (task queue) thereafter
 
 setTimeout(() => {
-	console.log('timeout 1');
+	console.log('timeout 1'); // task q 2
 }, 0);
 
 p2.then(msg => console.log(msg));
