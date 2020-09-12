@@ -1,4 +1,4 @@
-console.log('end 1');
+console.log('start 1');
 
 (async function p4() {
 	console.log('start 2');
@@ -20,7 +20,8 @@ console.log('end 1');
 	const promisesArray = [p1, p2(), p3()];
 
 	const all = await Promise.all(promisesArray);
-	console.log(all);
+
+	all.forEach(promise => console.log(promise));
 
 	console.log('end 2');
 })();
