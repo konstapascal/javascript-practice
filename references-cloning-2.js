@@ -13,7 +13,7 @@ pushToArray(5, arr1);
 console.log('After: ' + arr1 + ' ' + arr2);
 
 // Same applies here, best would be either JSON methods (dangerous with functions) or lodash
-obj1 = { arr1: [1, 2, 3], name: 'Konsta' };
+obj1 = { arr1: [1, [2], 3], name: 'Konsta' };
 obj2 = _.cloneDeep(obj1);
 
 obj1.arr1 = null;
