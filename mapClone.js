@@ -13,6 +13,8 @@ function mapClone(callback) {
 		// this.forEach((el, index) => {
 		// 	temp.push(callback(el, index, this));
 		// });
+	} else {
+		throw new Error('Not an array!');
 	}
 
 	return temp;
