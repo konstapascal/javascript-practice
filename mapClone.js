@@ -3,6 +3,7 @@ Object.prototype.mapClone = mapClone;
 
 function mapClone(callback) {
 	const temp = [];
+	console.log(arguments);
 
 	// case for arrays
 	if (Array.isArray(this)) {
@@ -20,6 +21,8 @@ function mapClone(callback) {
 	return temp;
 }
 
-const arr = [1, 2, 3, 4, 5].mapClone(val => val * 10);
+const arr = [1, 2, 3, 4, 5].mapClone((value, index, array) => {
+	return `index ${index} - value: ${value}`;
+});
 
 console.log(arr);
