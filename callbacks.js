@@ -12,7 +12,7 @@ function getUser(arg, callback) {
 			console.log('function1: getUser');
 			callback(new Error('Error was thrown!'));
 		} else {
-			console.log('function1: getUser (false)');
+			console.log(null, 'function1: getUser (false)');
 			callback(arg);
 		}
 	}, 555);
@@ -34,7 +34,8 @@ function getUserName(arg, callback) {
 
 // callback hell, nesting callbacks when chaining async functions (solved by promises)
 
-getUser('arg1 passed in', function (string) {
+getUser('arg1 passed in', function (err, string) {
+	if (err) return console.log(err);
 	console.log(string);
 	getUserDetails('arg2 passed in', function (string) {
 		console.log(string);
