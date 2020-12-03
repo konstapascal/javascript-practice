@@ -1,10 +1,12 @@
 console.log('1', this);
 
-(function globalFunction() {
+globalFunction();
+
+function globalFunction() {
 	console.log('2', this);
 	insideFunction();
 
 	function insideFunction() {
 		console.log('3', this);
 	}
-})();
+}
