@@ -4,6 +4,7 @@ Object.prototype.mapClone = mapClone;
 function mapClone(callback) {
 	const temp = [];
 	console.log(arguments);
+	console.log(this);
 
 	// case for arrays
 	if (Array.isArray(this)) {
