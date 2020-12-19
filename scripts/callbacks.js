@@ -9,10 +9,22 @@ const condition = false;
 function getUser(arg, callback) {
 	setTimeout(() => {
 		if (!condition) {
-			console.log('function1: getUser');
-			callback(new Error('Error was thrown!'));
+			console.log('function1: getUser error');
+			callback(null, new Error('Error was thrown!'));
 		} else {
-			console.log(null, 'function1: getUser (false)');
+			console.log('function1: getUser');
+			callback(arg);
+		}
+	}, 555);
+}
+
+function getUser2(arg, callback, error) {
+	setTimeout(() => {
+		if (!condition) {
+			console.log('function1: getUser error');
+			error(new Error('Error was thrown!'));
+		} else {
+			console.log('function1: getUser');
 			callback(arg);
 		}
 	}, 555);
