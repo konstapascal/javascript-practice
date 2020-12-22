@@ -13,7 +13,7 @@ date1 = new Date();
 set1 = new Set([1, 2]);
 map1 = new Map();
 
-// Instance prototypes are pointing to Object prototypes
+// Instance prototypes are pointing to object prototypes
 
 console.log(obj1.__proto__ === Object.prototype); // true
 console.log(arr1.__proto__ === Array.prototype); // true
