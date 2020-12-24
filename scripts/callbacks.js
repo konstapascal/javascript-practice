@@ -6,18 +6,20 @@ console.log('start');
 
 const condition = false;
 
+// both arguments and error passed in the callback
 function getUser(arg, callback) {
 	setTimeout(() => {
 		if (!condition) {
 			console.log('function1: getUser error');
-			callback(null, new Error('Error was thrown!'));
+			callback(new Error('Error was thrown!'));
 		} else {
 			console.log('function1: getUser');
-			callback(arg);
+			callback(null, arg);
 		}
 	}, 555);
 }
 
+// error passed in as a different callback function
 function getUser2(arg, callback, error) {
 	setTimeout(() => {
 		if (!condition) {
