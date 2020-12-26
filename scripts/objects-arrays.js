@@ -4,14 +4,14 @@ const obj1 = {
 	prop1: 'value1',
 	prop2: 'value2',
 	arr1: [1, 2, 3, 'string1', 'str2'],
-	function1: (arg) => console.log(`Hello ${arg}`),
+	function1: arg => console.log(`Hello ${arg}`)
 };
 
 const obj2 = {
 	prop1: 'value1',
 	prop2: 'value2',
 	arr1: [1, 2, 3, 'string1', 'str2'],
-	function1: (arg) => console.log(`Hello ${arg}`),
+	function1: arg => console.log(`Hello ${arg}`)
 };
 
 const obj3 = Object.create(obj2);
