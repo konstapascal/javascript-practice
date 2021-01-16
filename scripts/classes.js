@@ -4,7 +4,7 @@ const person = {
 	age: 'default',
 	printInfo: function () {
 		return `${this.firstname} ${this.lastname} - ${this.age}`;
-	},
+	}
 };
 
 const numbers = [1, 2, 3];
@@ -12,7 +12,7 @@ const fruits = new Array('apple', 'orange', 'mango');
 
 const konsta = {
 	firstname: 'konsta',
-	lastname: 'pascal',
+	lastname: 'pascal'
 };
 
 konsta.__proto__ = person;
@@ -30,8 +30,18 @@ class Person {
 
 	static printInfo2() {
 		return (
-			this.firstname + ' ' + this.lastname + ' - ' + this.age + ' ' + this.job
+			this.firstname +
+			' ' +
+			this.lastname +
+			' - ' +
+			this.age +
+			' ' +
+			this.job
 		);
+	}
+
+	prototypeFunction() {
+		console.log('I am on the prototype!');
 	}
 }
 
@@ -43,7 +53,13 @@ class Student extends Person {
 
 	printInfo2() {
 		return (
-			this.firstname + ' ' + this.lastname + ' - ' + this.age + ' ' + this.grade
+			this.firstname +
+			' ' +
+			this.lastname +
+			' - ' +
+			this.age +
+			' ' +
+			this.grade
 		);
 	}
 }
