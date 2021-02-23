@@ -23,6 +23,7 @@ function Car(brand, sound) {
 Car.prototype = Object.create(Vehicle.prototype);
 Car.prototype.constructor = Car;
 
+// --------- SLOWER METHODS -----------
 // ALTERNATIVE 2
 // Car.prototype.__proto__ = Vehicle.prototype;
 
