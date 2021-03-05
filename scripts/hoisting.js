@@ -2,7 +2,8 @@ const log = console.log;
 
 // function
 
-hoistedFunction();
+// hoistedFunction();
+
 function hoistedFunction() {
 	log('I am a function!');
 }
@@ -10,17 +11,19 @@ function hoistedFunction() {
 // var
 
 log(variable_var);
-var variable_var = 'I am a var!';
+var variable_var;
+log(variable_var);
+variable_var = 'I am a var!';
 log(variable_var);
 
-// let
+// // let
 
-log(variable_let);
-let variable_let = 'I am a let!';
-log(variable_let);
+// log(variable_let);
+// let variable_let = 'I am a let!';
+// log(variable_let);
 
-// const
+// // const
 
-log(variable_const);
-let variable_const = 'I am a const!';
-log(variable_const);
+// log(variable_const);
+// let variable_const = 'I am a const!';
+// log(variable_const);
