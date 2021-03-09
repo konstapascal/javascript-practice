@@ -1,1 +1,2 @@
-## Practicing random JS concepts
+## js-practice
+# Practicing random JS concepts
