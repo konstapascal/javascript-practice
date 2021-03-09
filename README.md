@@ -1,0 +1,1 @@
+Practicing random JS concepts
