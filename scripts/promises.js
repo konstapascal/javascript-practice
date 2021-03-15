@@ -25,3 +25,16 @@ p2.then(msg => console.log(msg));
 p1.then(msg => console.log(msg));
 
 console.log('end');
+
+// execution output:
+
+/*
+start 
+promise 1 log
+promise 2 log
+end
+promise 1
+promise 2 log inside timeout
+promise 2
+timeout 1
+*/
