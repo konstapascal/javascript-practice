@@ -4,14 +4,15 @@ console.log('start');
 
 const p1 = new Promise(resolve => {
 	console.log('promise 1 log');
-	resolve('promise 1'); // micro q
+	resolve('promise 1'); // micro q 1
 });
 
 const p2 = new Promise(resolve => {
 	console.log('promise 2 log');
 	setTimeout(() => {
+		// task q 1
 		console.log('promise 2 log inside timeout');
-		resolve('promise 2'); // task q 1
+		resolve('promise 2'); // micro q 2
 	}, 0);
 });
 
