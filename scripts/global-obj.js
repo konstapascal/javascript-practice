@@ -2,8 +2,8 @@
 // 2. This new object instance gets a property __proto__ pointing to the prototype of the object it has been created from.
 // 3. This way instance object inherits all methods and properties from up the prototype chain.
 
-// Prototype is an special property of a function/class/super used to create the prototype chain in new instances of said object.
-// __proto__ is a property present in ALL objects pointing up the prototype chain.
+// Prototype is an special property of a function/constructor used to create the prototype chain in new instances of said object.
+// __proto__ is a property containing the reference to a prototype present in ALL objects pointing up the prototype chain.
 // Object is the top of the chain in JS, Object's __proto__ is null.
 
 // Global objects (Object, Array, Date, Set, Map...)

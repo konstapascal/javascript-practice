@@ -8,7 +8,7 @@ Vehicle.vehicleStaticFunction = function () {
 };
 
 Vehicle.prototype.vehiclePrototypeFunction = function () {
-	console.log('I am a vehicle shared function!');
+	console.log('I am a vehicle prototype shared function!');
 };
 
 function Car(brand, sound) {
