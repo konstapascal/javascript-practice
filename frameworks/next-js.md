@@ -36,7 +36,7 @@ Method for returning data, used in generating the component/page.
 -  Static files generated once at build time.
 -  Serves files immediately on requests.
 -  Very fast.
--  Can be stored in a CND.
+-  Can be stored in a CDN.
 
 **CONS:**
 
