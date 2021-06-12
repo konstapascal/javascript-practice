@@ -39,3 +39,6 @@ promise 2 log inside timeout
 promise 2
 timeout 1
 */
+
+// good resource explaining Promise constructor and promise behaviour:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise
