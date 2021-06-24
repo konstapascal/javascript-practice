@@ -26,18 +26,14 @@ class Person {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
+
+		this.instanceMethod = function () {
+			console.log('This is a Person instance method!');
+		};
 	}
 
 	static printInfo2() {
-		return (
-			this.firstname +
-			' ' +
-			this.lastname +
-			' - ' +
-			this.age +
-			' ' +
-			this.job
-		);
+		return this.firstname + ' ' + this.lastname + ' - ' + this.age + ' ' + this.job;
 	}
 
 	prototypeFunction() {
@@ -52,15 +48,7 @@ class Student extends Person {
 	}
 
 	printInfo2() {
-		return (
-			this.firstname +
-			' ' +
-			this.lastname +
-			' - ' +
-			this.age +
-			' ' +
-			this.grade
-		);
+		return this.firstname + ' ' + this.lastname + ' - ' + this.age + ' ' + this.grade;
 	}
 }
 
@@ -93,14 +81,14 @@ const johnProf2 = new Professor('John2', 'Prof2', 42, 'professor2');
 const trainee = new Trainee('Trainee', 'train2', 22, 'trainee');
 
 console.log(johnPerson2);
-console.log(konsta2);
-console.log(johnProf2);
-console.log(trainee);
+// console.log(konsta2);
+// console.log(johnProf2);
+// console.log(trainee);
 
 function Person2(dob) {
 	this.dob = dob;
 }
 
-console.log(Person2.prototype);
+// console.log(Person2.prototype);
 
 const instancePerson = new Person2('instance');
