@@ -1,6 +1,10 @@
 function Vehicle(type, name) {
 	this.type = type;
 	this.name = name;
+
+	this.vehicleInstanceFunction = function () {
+		console.log('I am a vehicle instance own function!');
+	};
 }
 
 Vehicle.vehicleStaticFunction = function () {
@@ -42,3 +46,5 @@ const vehicle = new Vehicle('vehicle', 'name');
 
 const teslaCar = new Car('Tesla', 'Shhh..');
 const bmwCar = new Car('BMW', 'Vrooom..');
+
+// console.log(vehicle.vehicleInstanceFunction());
