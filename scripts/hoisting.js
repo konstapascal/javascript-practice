@@ -16,7 +16,7 @@ function hoistedFunction() {
 // variable_var = 'I am a var!';
 // log(variable_var);
 
-// // let
+// let
 
 // log(variable_let);
 let variable_let;
@@ -24,7 +24,7 @@ log(variable_let);
 variable_let = 'I am a let!';
 log(variable_let);
 
-// // const
+// const
 
 // log(variable_const);
 // let variable_const = 'I am a const!';
