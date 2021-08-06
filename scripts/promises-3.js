@@ -21,3 +21,20 @@ prom1.then(() => {
 });
 
 console.log('end');
+
+/* 
+script output:
+
+start
+inside prom 1
+end
+prom 1 then
+inside prom 2
+prom 2 then
+
+execution order explanation:
+1. global execution frame gets pushed onto the call stack
+2. log gets pushed to the stack, executed and popped off
+3. the 2 promises are instantiated, their executor function
+
+*/
