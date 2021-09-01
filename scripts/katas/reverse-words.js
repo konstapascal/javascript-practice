@@ -2,13 +2,10 @@
 // "double  spaces"      ==> "elbuod  secaps"
 
 function reverseWords(str) {
-	let newStr = '';
+	let words = str.split(' ');
+	let reversedWords = words.map(word => word.split('').reverse().join(''));
 
-	for (let i = 0; i < str.length; i++) {
-		newStr = str[i] + newStr;
-	}
-
-	return newStr;
+	return reversedWords.join(' ');
 }
 
 console.log(reverseWords('Hello World!'));
