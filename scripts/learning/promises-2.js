@@ -18,7 +18,6 @@ console.log('start 1');
 	}
 
 	const promisesArray = [p1, p2(), p3()];
-
 	const all = await Promise.all(promisesArray);
 
 	all.forEach(promise => console.log(promise));
