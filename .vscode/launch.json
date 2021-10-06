@@ -5,11 +5,10 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"type": "chrome",
+			"type": "node",
 			"request": "launch",
-			"name": "Chrome Debug",
-			"url": "http://localhost:5500",
-			"webRoot": "${workspaceFolder}"
+			"name": "Launch Current Opened File",
+			"program": "${file}"
 		}
 	]
 }

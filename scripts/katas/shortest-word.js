@@ -7,4 +7,4 @@ function findShort(s) {
 	return shortest.length;
 }
 
-console.log(findShort('Hello world, this is a nice day!'));
+console.log(findShort('Hnode sho	lo world, this isa aa nice day!'));
