@@ -6,7 +6,7 @@ function squareDigits(num) {
 	const result = num
 		.toString()
 		.split('')
-		.map(digit => Math.pow(+digit, 2))
+		.map((digit) => Math.pow(+digit, 2))
 		.join('');
 
 	return Number(result);

@@ -8,7 +8,7 @@ function halvingSum(num) {
 		num = Math.floor(num / 2);
 	}
 
-	return halves.reduce((acc, curr) => acc + curr);
+	return halves.reduce((acc, curr) => );
 }
 
 console.log(halvingSum(25));
