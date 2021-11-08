@@ -1,36 +1,38 @@
 console.log('start');
 
 var prom1 = new Promise(resolve => {
-	console.log('inside prom 1');
-	resolve('resolved 1');
+	console.log('inside promise executor 1');
+	resolve('inside then 1');
 });
 
 var prom2 = new Promise(resolve =>
 	setTimeout(() => {
-		console.log('inside prom 2');
-		resolve('resolved 2');
+		console.log('inside promise executor 2');
+		resolve('inside then 2');
 	}, 0)
 );
 
-prom2.then(() => {
-	console.log('prom 2 then');
-});
+function prom3() {
+	return new Promise(resolve =>
+		setTimeout(() => {
+			console.log('inside promise executor 3');
+			resolve('inside then 3');
+		}, 0)
+	);
+}
 
-prom1.then(() => {
-	console.log('prom 1 then');
-});
+prom2.then(msg => console.log(msg));
+prom1.then(msg => console.log(msg));
+prom3().then(msg => console.log(msg));
 
 console.log('end');
 
 /* 
-script output:
 
-start
-inside prom 1
-end
-prom 1 then
-inside prom 2
-prom 2 then
+TODO
+script output:
+not written
+TODO
 
 execution order explanation:
 1. global execution frame gets pushed onto the call stack
